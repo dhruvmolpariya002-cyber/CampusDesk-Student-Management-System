@@ -1,0 +1,166 @@
+/**
+ * CampusDesk — Academic Management System Custom Stylesheet
+ * File: assets/css/style.css
+ */
+
+:root {
+  --cd-primary: #1e40af;
+  --cd-primary-dark: #0f2b48;
+  --cd-primary-light: #3b82f6;
+  --cd-sidebar-bg: #0f172a;
+  --cd-sidebar-hover: #1e293b;
+  --cd-surface: #ffffff;
+  --cd-bg: #f8fafc;
+  --cd-border: #e2e8f0;
+  --cd-text-main: #0f172a;
+  --cd-text-muted: #64748b;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--cd-bg);
+  color: var(--cd-text-main);
+  min-height: 100vh;
+}
+
+/* Tabular figures for tables, amounts and marks */
+.tabular-nums, td.metric, .badge-mono {
+  font-family: 'JetBrains Mono', monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Sidebar Styling */
+#sidebar-wrapper {
+  min-height: 100vh;
+  width: 260px;
+  background-color: var(--cd-sidebar-bg);
+  transition: margin 0.25s ease-out;
+}
+
+#sidebar-wrapper .sidebar-heading {
+  padding: 1.25rem 1.5rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+#sidebar-wrapper .nav-link {
+  color: #94a3b8;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: all 0.2s ease;
+  border-left: 3px solid transparent;
+}
+
+#sidebar-wrapper .nav-link:hover {
+  color: #ffffff;
+  background-color: var(--cd-sidebar-hover);
+}
+
+#sidebar-wrapper .nav-link.active {
+  color: #ffffff;
+  background-color: rgba(30, 64, 175, 0.25);
+  border-left-color: #38bdf8;
+  font-weight: 600;
+}
+
+#sidebar-wrapper .nav-section-title {
+  padding: 1rem 1.5rem 0.35rem;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #64748b;
+  font-weight: 700;
+}
+
+/* Page Content */
+#page-content-wrapper {
+  min-width: 100vw;
+}
+
+@media (min-width: 992px) {
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
+}
+
+/* Clean Cards without thick left accent borders */
+.card-stat {
+  background: var(--cd-surface);
+  border: 1px solid var(--cd-border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card-stat:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.stat-value {
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: var(--cd-primary-dark);
+  line-height: 1.2;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: var(--cd-text-muted);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+/* Data Tables */
+.table-cd {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--cd-border);
+}
+
+.table-cd thead th {
+  background-color: #f8fafc;
+  color: #475569;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid var(--cd-border);
+  padding: 0.85rem 1rem;
+}
+
+.table-cd tbody td {
+  padding: 0.85rem 1rem;
+  vertical-align: middle;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 0.9rem;
+}
+
+.table-cd tbody tr:hover {
+  background-color: #f8fafc;
+}
+
+/* Buttons */
+.btn-cd-primary {
+  background-color: var(--cd-primary);
+  color: white;
+  border: none;
+  font-weight: 600;
+  padding: 0.5rem 1.25rem;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.btn-cd-primary:hover {
+  background-color: #1d4ed8;
+  color: white;
+}

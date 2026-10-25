@@ -1,0 +1,6 @@
+{
+  "name": "CampusDesk — Student Management System",
+  "description": "Complete PHP & MySQL academic student management web application with role-based access, attendance tracking, marksheet generation, fee management, and XAMPP export.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
